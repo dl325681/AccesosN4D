@@ -8,6 +8,13 @@ public class Acceso {
 private Date entrada;
 private Date salida;
 
+
+    public Acceso(Date entrada, Date salida) {
+        this.entrada = entrada;
+        this.salida = salida;
+    }
+
+
 public Date getEntrada() {
     return entrada;
 }
@@ -21,16 +28,17 @@ public void setSalida(Date salida) {
     this.salida = salida;
 }
 
-
-
 public int getDuracionEnMinutos() {
 
     if(entrada==null || salida == null || salida.before(entrada)) {
-    return 0; }
+    return 0;
+ }
+ 
+
     }
 
 
-    
+
 }
 
 

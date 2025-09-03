@@ -3,6 +3,7 @@ package com.SolucionAccesoN4d.Acceson4D.servicios;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.SolucionAccesoN4d.Acceson4D.ClasesDePrueba.DatosDePrueba;
 import com.SolucionAccesoN4d.Acceson4D.modelo.Usuario;
 
 public class ServiciosUsuario {
@@ -34,7 +35,7 @@ public class ServiciosUsuario {
                
         for(Usuario u:usuarios){
            
-            if(u.isHabilitado() && u.tiempoTotalAcceso()>min){
+            if(u.getHabilitado() && u.tiempoTotalAcceso()>min){
                 resultado.add(u);
             }
         }

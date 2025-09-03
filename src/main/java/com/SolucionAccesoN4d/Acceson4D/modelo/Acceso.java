@@ -15,6 +15,11 @@ private Date salida;
     }
 
 
+public Acceso() {
+        //TODO Auto-generated constructor stub
+    }
+
+
 public Date getEntrada() {
     return entrada;
 }
@@ -33,7 +38,10 @@ public int getDuracionEnMinutos() {
     if(entrada==null || salida == null || salida.before(entrada)) {
     return 0;
  }
- 
+
+ int diffInMillis = (int) (salida.getTime()-entrada.getTime());
+
+ return diffInMillis /(60*1000);
 
     }
 

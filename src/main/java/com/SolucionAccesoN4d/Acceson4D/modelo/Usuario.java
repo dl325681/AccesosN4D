@@ -1,6 +1,7 @@
 package com.SolucionAccesoN4d.Acceson4D.modelo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Usuario {
 
@@ -11,6 +12,14 @@ private Boolean habilitado;
 private ArrayList<Acceso> accesos = new ArrayList<Acceso>();
 
 
+
+public Usuario(String string, String string2, String string3, boolean b) {
+    //TODO Auto-generated constructor stub
+}
+
+public Usuario() {
+    //TODO Auto-generated constructor stub
+}
 
 public int tiempoTotalAcceso() {
 
@@ -57,10 +66,22 @@ public void setHabilitado(Boolean habilitado) {
     this.habilitado = habilitado;
 }
 
+
+
+
 @Override
 public String toString(){
     return nombre + " " + apellido;
 
+}
+
+public void agregarAcceso(Acceso acceso) {
+    accesos.add(acceso);
+}
+
+public List<Acceso> getAccesos() {
+
+return accesos;
 }
 
 
